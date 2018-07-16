@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
   let numberOfColumns = 9
   let numberOfRows = 11
 

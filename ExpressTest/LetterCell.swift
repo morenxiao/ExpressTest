@@ -10,7 +10,7 @@ import UIKit
 
 let LetterCellIdentifier = "LetterCell"
 
-class LetterCell: UICollectionViewCell, UITextFieldDelegate {
+class LetterCell: UICollectionViewCell, UITextFieldDelegate, Buzzable {
     
   @IBOutlet weak var letterLabel: UILabel!
   @IBOutlet weak var letterTextField: UITextField!
@@ -46,8 +46,9 @@ class LetterCell: UICollectionViewCell, UITextFieldDelegate {
   @IBAction func textFieldEditingChanged(_ sender: UITextField) {
     limitToOneCharacter(textField: sender)
     
-    if hasMatched() {
-      print("MATCHED!")
+    if !hasMatched() {
+      sender.text = ""
+      buzz()
     }
   }
 }
