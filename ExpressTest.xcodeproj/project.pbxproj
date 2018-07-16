@@ -14,6 +14,7 @@
 		BB231DE620FC896100E60371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB231DE420FC896100E60371 /* LaunchScreen.storyboard */; };
 		BB231DF120FC896100E60371 /* ExpressTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB231DF020FC896100E60371 /* ExpressTestTests.swift */; };
 		BB231DFC20FC896100E60371 /* ExpressTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB231DFB20FC896100E60371 /* ExpressTestUITests.swift */; };
+		BB231E0A20FC8C6D00E60371 /* LetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB231E0920FC8C6D00E60371 /* LetterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BB231DF720FC896100E60371 /* ExpressTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpressTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB231DFB20FC896100E60371 /* ExpressTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressTestUITests.swift; sourceTree = "<group>"; };
 		BB231DFD20FC896100E60371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB231E0920FC8C6D00E60371 /* LetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				BB231DE220FC896100E60371 /* Assets.xcassets */,
 				BB231DE420FC896100E60371 /* LaunchScreen.storyboard */,
 				BB231DE720FC896100E60371 /* Info.plist */,
+				BB231E0920FC8C6D00E60371 /* LetterCell.swift */,
 			);
 			path = ExpressTest;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB231DDE20FC896100E60371 /* ViewController.swift in Sources */,
+				BB231E0A20FC8C6D00E60371 /* LetterCell.swift in Sources */,
 				BB231DDC20FC896100E60371 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
