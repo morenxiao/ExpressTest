@@ -14,9 +14,9 @@ class ViewController: UIViewController {
   let numberOfRows = 11
 
   let words = [
-    (string: "Animal", x: 2, y: 0),
-    (string: "Busy", x:4, y: 5),
-    (string: "Computer", x: 1, y: 9)
+    (string: "Animal", x: 2, y: 0, vertical: true),
+    (string: "Busy", x:4, y: 5, vertical: true),
+    (string: "Computer", x: 1, y: 9, vertical: false)
     ]
   
   override func viewDidLoad() {
@@ -40,14 +40,26 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LetterCellIdentifier, for: indexPath) as! LetterCell
     
     for word in words {
-      let row = indexPath.item / 9
-      let column = indexPath.item % 9
-      
-      if (row == word.y &&
-        column >= word.x &&
-        column < word.string.count + word.x) {
+      var row = indexPath.item / 9
+      var column = indexPath.item % 9
+      var wordX = word.x
+      var wordY = word.y
+
+      if (word.vertical) {
+        var tmp = row
+        row = column
+        column = tmp
         
-        let letterIndex = word.string.index(word.string.startIndex, offsetBy: column - word.x)
+        tmp = wordX
+        wordX = wordY
+        wordY = tmp
+      }
+      
+      if (row == wordY &&
+        column >= wordX &&
+        column < word.string.count + wordX) {
+        
+        let letterIndex = word.string.index(word.string.startIndex, offsetBy: column - wordX)
         let letterString = word.string[letterIndex]
         cell.letterLabel.text = String(letterString)
       }
