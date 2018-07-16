@@ -67,11 +67,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     return cell
   }
-  
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-  }
-  
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
     let screenRect = UIScreen.main.bounds
@@ -79,5 +75,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     let cellWidth = screenWidth/CGFloat(numberOfColumns) - 1
     
     return CGSize(width: cellWidth, height: cellWidth)
+  }
+}
+
+extension ViewController: UITextFieldDelegate {
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    view.endEditing(true)
+    return true
   }
 }
