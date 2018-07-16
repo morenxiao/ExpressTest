@@ -35,7 +35,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUb-xx-pZy">
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUb-xx-pZy">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -51,6 +51,13 @@
                                                         <outlet property="delegate" destination="BYZ-38-t0r" id="Qma-1j-Re8"/>
                                                     </connections>
                                                 </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="chx-YU-34F">
+                                                    <rect key="frame" x="2" y="2" width="10" height="10"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="Atl-ps-Cwc"/>
+                                                        <constraint firstAttribute="height" constant="10" id="rJj-eJ-G7j"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,12 +66,15 @@
                                             <constraint firstItem="qUb-xx-pZy" firstAttribute="top" secondItem="S4m-XU-FyH" secondAttribute="top" id="DcR-Yf-BcN"/>
                                             <constraint firstItem="z7b-RQ-uAs" firstAttribute="top" secondItem="S4m-XU-FyH" secondAttribute="top" id="Jp1-HA-wf0"/>
                                             <constraint firstAttribute="bottom" secondItem="qUb-xx-pZy" secondAttribute="bottom" id="NR2-8u-PAX"/>
+                                            <constraint firstItem="chx-YU-34F" firstAttribute="top" secondItem="S4m-XU-FyH" secondAttribute="top" constant="2" id="OXv-1F-sOm"/>
                                             <constraint firstAttribute="bottom" secondItem="z7b-RQ-uAs" secondAttribute="bottom" id="QXP-oy-TG4"/>
+                                            <constraint firstItem="chx-YU-34F" firstAttribute="leading" secondItem="S4m-XU-FyH" secondAttribute="leading" constant="2" id="Yzj-Wo-fVf"/>
                                             <constraint firstAttribute="trailing" secondItem="z7b-RQ-uAs" secondAttribute="trailing" id="fkX-df-HiX"/>
                                             <constraint firstAttribute="trailing" secondItem="qUb-xx-pZy" secondAttribute="trailing" id="gPK-o7-E90"/>
                                             <constraint firstItem="z7b-RQ-uAs" firstAttribute="leading" secondItem="S4m-XU-FyH" secondAttribute="leading" id="noB-TN-jVv"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="arrowImageView" destination="chx-YU-34F" id="BBd-3D-y7R"/>
                                             <outlet property="letterLabel" destination="qUb-xx-pZy" id="VtE-fd-ewq"/>
                                             <outlet property="letterTextField" destination="z7b-RQ-uAs" id="cTS-ZG-Yx9"/>
                                         </connections>

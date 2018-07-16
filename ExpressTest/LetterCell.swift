@@ -14,6 +14,7 @@ class LetterCell: UICollectionViewCell, UITextFieldDelegate, Buzzable {
     
   @IBOutlet weak var letterLabel: UILabel!
   @IBOutlet weak var letterTextField: UITextField!
+  @IBOutlet weak var arrowImageView: UIImageView!
   
   override init(frame: CGRect) {
     super.init(frame:frame)
@@ -23,6 +24,10 @@ class LetterCell: UICollectionViewCell, UITextFieldDelegate, Buzzable {
   
   required init?(coder aDecoder: NSCoder) {
      super.init(coder:aDecoder)
+  }
+  
+  func setImage(down: Bool) {
+      arrowImageView.image = down ? #imageLiteral(resourceName: "down-arrow") : #imageLiteral(resourceName: "right-arrow")
   }
   
   func hasMatched() -> Bool {

@@ -62,6 +62,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let letterIndex = word.string.index(word.string.startIndex, offsetBy: column - wordX)
         let letterString = word.string[letterIndex]
         cell.letterLabel.text = String(letterString)
+
+        if (column == wordX) {
+          cell.setImage(down: word.vertical)
+        }
       }
     }
     
